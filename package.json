@@ -1,0 +1,13 @@
+{
+  "name": "react-just-datepicker",
+  "description": "Simple and flexible React datepicker component",
+  "author": "Linkerin",
+  "keywords": [
+    "react",
+    "datepicker",
+    "components",
+    "ui"
+  ],
+  "version": "0.1.0",
+  "private": false
+}

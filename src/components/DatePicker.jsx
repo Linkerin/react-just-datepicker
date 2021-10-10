@@ -11,8 +11,8 @@ import createCalendar, {
   handleUserInput,
   monthNames,
   weekDays
-} from '../utils';
-import styles from '../DatePicker.module.css';
+} from '../utils/datepicker-utils';
+import styles from '../styles/DatePicker.module.css';
 
 function DatePicker({
   name = null,
