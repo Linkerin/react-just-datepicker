@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pickerContainer {
+  --main-color: #555;
+  --pale-color: #999;
+  --light-grey: #eee;
+  --selected-color: #6951ae;
+  --active-date-color: #7a65be;
+  --white-color: #fff;
+  --input-bg-color: var(--white-color);
+  --input-border-color: var(--pale-color);
+  --input-border-focus-color: var(--main-color);
+  --input-placeholder-color: var(--pale-color);
+  --input-font-color: var(--main-color);
+  --btn-main-color: var(--light-grey);
+  --btn-active-color: var(--pale-color);
+  --date-main-color: var(--main-color);
+  --hover-date-color: var(--light-grey);
+  --arrow-color: var(--main-color);
+  --arrow-color-clicked: var(--white-color);
+  --other-date-color: var(--pale-color);
+  --clicked-date-color: var(--white-color);
+  --selected-date-color: var(--white-color);
+  --weekdays-color: var(--main-color);
+}
+
+.picker {
+  position: relative;
+}
+
+.pickerInput {
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.3rem;
+  background-color: var(--input-bg-color);
+  color: var(--input-font-color);
+  display: block;
+  outline: none;
+  padding: 0.2rem 0.6rem;
+}
+
+.pickerInput:focus {
+  border-color: var(--input-border-focus-color);
+}
+
+.pickerInput::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.calendarContainer {
+  background-color: var(--white-color); /* --white-color: #fff */
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 0.3em var(--light-grey); /* --light-grey: #eee */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  float: left;
+  height: fit-content;
+  width: fit-content;
+  margin: 0.4em 0;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 1;
+}
+
+.calendarHeader {
+  align-items: center;
+  color: var(--main-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.3em;
+}
+
+.headerMonthYear {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.4em;
+  min-width: 5em;
+}
+.headerYear {
+  font-size: 1.4em;
+}
+
+.calendarNavBtn {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  background-color: var(--btn-main-color);
+  border: none;
+  border-radius: 100%;
+  flex-direction: row;
+  height: 1.6rem;
+  justify-content: center;
+  outline: none;
+  width: 1.6rem;
+}
+
+.calendarNavBtn:focus {
+  border: 1px solid var(--main-color);
+}
+
+.calendarNavBtn:active {
+  background-color: var(--btn-active-color);
+}
+
+.calendarNavBtn:active path {
+  stroke: var(--arrow-color-clicked);
+}
+
+.calendarNavBtnArrow {
+  height: 0.8rem;
+  width: auto;
+}
+
+.calendarNavBtnArrow path {
+  stroke: var(--arrow-color);
+}
+
+.daysContainer,
+.weekDays {
+  align-items: center;
+  display: grid;
+  font-size: 0.8em;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.1em;
+  justify-items: center;
+  margin-top: 0.4em;
+}
+
+.weekDays {
+  color: var(--weekdays-color);
+  font-size: 0.7em;
+  margin-top: 0.7em;
+}
+
+.currentMonthDate,
+.otherMonthDate,
+.selectedDate {
+  align-items: center;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 1.5rem;
+  justify-content: center;
+  width: 1.5rem;
+}
+
+.currentMonthDate:hover,
+.otherMonthDate:hover {
+  background-color: var(--hover-date-color);
+  cursor: pointer;
+}
+
+.currentMonthDate:active,
+.otherMonthDate:active {
+  color: var(--clicked-date-color);
+  background-color: var(--active-date-color);
+}
+
+.currentMonthDate {
+  color: var(--date-main-color);
+}
+
+.otherMonthDate {
+  color: var(--other-date-color);
+}
+
+.selectedDate {
+  border: none;
+  border-radius: 100%;
+  background-color: var(--selected-color);
+  color: var(--selected-date-color);
+  font-weight: bold;
+}
