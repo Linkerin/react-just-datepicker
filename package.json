@@ -9,5 +9,19 @@
     "ui"
   ],
   "version": "0.1.0",
-  "private": false
+  "private": false,
+  "main": "index.js",
+  "module": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Linkerin/react-just-datepicker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Linkerin/react-just-datepicker/issues"
+  },
+  "homepage": "https://github.com/Linkerin/react-just-datepicker#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
 }
