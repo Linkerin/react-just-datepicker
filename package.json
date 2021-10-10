@@ -10,8 +10,9 @@
   ],
   "version": "0.1.0",
   "private": false,
-  "main": "index.js",
-  "module": "index.js",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/module.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Linkerin/react-just-datepicker.git"
@@ -21,7 +22,15 @@
   },
   "homepage": "https://github.com/Linkerin/react-just-datepicker#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0"
+  }
 }

@@ -1,0 +1,9 @@
+.git
+.gitignore
+.npmignore
+.DS_Store
+.parcel-cache
+
+img/
+src/
+package-lock.json

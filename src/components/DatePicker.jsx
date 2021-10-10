@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import DaysContainer from './DaysContainer';
-import CalendarHeader from './CalendarHeader';
-import WeekDays from './WeekDays';
+import DaysContainer from './DaysContainer.jsx';
+import CalendarHeader from './CalendarHeader.jsx';
+import WeekDays from './WeekDays.jsx';
 import createCalendar, {
   addLocale,
   addWeekDaysLocale,
@@ -12,7 +12,7 @@ import createCalendar, {
   monthNames,
   weekDays
 } from '../utils/datepicker-utils';
-import styles from '../styles/DatePicker.module.css';
+import * as styles from '../styles/DatePicker.module.css';
 
 function DatePicker({
   name = null,
